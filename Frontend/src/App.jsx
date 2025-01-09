@@ -1,8 +1,8 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import {Routes,Route} from  "react-router-dom"
 
-function App() {
+const App = () => {
   return (
     <div>
       <Routes>
