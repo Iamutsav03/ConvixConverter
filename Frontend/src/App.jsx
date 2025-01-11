@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const App = () => {
-  // State to track cursor position
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
-  // Update cursor position based on mouse movement
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
 
-  // Add mousemove event listener on mount and clean up on unmount
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
